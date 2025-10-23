@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Lab Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Flask Lab Project</h1>
+        <p>This is a collaborative Flask application with CI/CD</p>
+        
+        <div class="form-section">
+            <h2>Submit Data</h2>
+            <form id="dataForm">
+                <input type="text" id="dataInput" placeholder="Enter some data" required>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="response"></div>
+        </div>
+
+        <div class="health-section">
+            <h2>System Health</h2>
+            <button id="checkHealth">Check Health</button>
+            <div id="healthStatus"></div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
